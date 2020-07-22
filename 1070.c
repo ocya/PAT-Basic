@@ -86,3 +86,29 @@ void InsertMinHeap( Heap H, ElementType Item ){
         H->Data[P] = Item;
     }
 }
+
+/* 快速排序实现 */
+// int CmpInc( const void *A, const void *B );
+// int main( int argc, const char *argv[]){
+    
+//     int N;
+//     int Sum = 0;
+//     scanf( "%d\n", &N );
+//     int Data[N];
+//     for( int i = 0 ; i < N ; i++ )
+//         scanf( "%d", &Data[i] );
+//     qsort( Data, N, sizeof(int), CmpInc );
+    
+//     for( int i = 0 ; i < N ; i++ ){
+//         if( i == 0 ) Sum += Data[i];
+//         else Sum = ( Sum  + Data[i] ) / 2;
+//     }
+        
+//     printf( "%d", Sum );
+//     return 0;
+    
+// }
+
+// int CmpInc( const void *A, const void *B ){
+//     return *(int *)A - *(int *)B;
+// }
