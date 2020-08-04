@@ -2,8 +2,6 @@
 #include <string>
 #include <algorithm>
 
-#define MaxN 1000
-
 using namespace std;
 int main(int argc, const char *argv[]){
 
@@ -35,3 +33,24 @@ int main(int argc, const char *argv[]){
 
     return 0;
 }
+//#include <iostream>
+// #include <string>
+// #include <algorithm>
+
+
+
+// using namespace std;
+// int main(int argc, const char *argv[]){
+
+//     string A, B;
+//     bool isPrinted[200] = { false };
+//     getline( cin, A );
+//     getline( cin, B );
+//     string S = A + B;
+//     for( int i = 0 ; i < S.length() ; i++ ){
+//         if( isPrinted[ S[i] ] == false ) cout << S[i];
+//         isPrinted[ S[i] ] = true;
+//     }
+
+//     return 0;
+// }
