@@ -77,8 +77,46 @@ int main( int argc, const char *argv[] ){
     return 0;
 } 
 
-/*
+/* AC */
+#include <iostream>
+#include <string>
+#include <cstring>
 
-- -.123
+using namespace std;
 
-*/
+int main( int argc, const char *argv[] ){
+
+    int N;
+    cin >> N;
+    /* 测试点2，超长字符串 */
+    char StrA[50], StrB[50];
+    double Sum, Num, Average;
+    int LegalCount = 0;
+    
+    Sum = 0;
+
+    for( int i = 0 ; i < N ; i++ ){
+        Num = 0;
+        scanf( "%s", StrA );
+        sscanf( StrA, "%lf", &Num ); /* 从StrA 中读取浮点数，赋值给Num */
+        sprintf( StrB, "%.2f", Num );/* 将浮点数 Num,作为值写入字符串 StrB中 */
+        bool isLegal = true;
+        for( int j = 0 ; j < strlen( StrA ) ; j++ ) /* 如果StrA 是合法的字符串，StrA等于StrB */
+            if( StrA[j] != StrB[j] )  isLegal = false;
+        if( !isLegal || Num > 1000 || Num < - 1000 )
+            cout << "ERROR: " << StrA << " is not a legal number" << endl; 
+        else{
+            LegalCount++;
+            Sum += Num;
+        }
+    }
+    if( LegalCount == 0 ) cout << "The average of 0 numbers is Undefined";
+    else if( LegalCount == 1 ) printf( "The average of 1 number is %.2f", Sum );
+    else{
+        Average = Sum / LegalCount;
+        cout << "The average of " << LegalCount << " numbers is ";
+        printf( "%.2f", Average );
+    }
+    
+    return 0;
+}
